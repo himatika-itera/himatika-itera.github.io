@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anggota · Himatika ITERA</title>
+<meta name="description" content="Daftar anggota Himatika ITERA per angkatan.">
+<meta name="theme-color" content="#facc15">
+<script>try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark')}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/tailwind.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="bg-stone-50 text-neutral-900 antialiased dark:bg-neutral-950 dark:text-neutral-100" data-root="../" data-page="members">
+<div id="app-header"></div>
+<main id="main" class="mx-auto max-w-6xl px-4 py-10">
+<header class="mb-8"><h1 class="text-3xl font-extrabold md:text-4xl">Anggota</h1><p class="mt-2 max-w-2xl text-neutral-600 dark:text-neutral-400">Daftar anggota Himatika ITERA berdasarkan angkatan.</p><div class="mt-4 h-1.5 w-20 rounded-full bg-brand-400"></div></header>
+<div id="year-pills" class="mb-6 flex flex-wrap gap-2"></div>
+<div class="mb-4 flex flex-wrap items-end justify-between gap-3">
+  <div><h2 id="member-title" class="text-2xl font-extrabold"></h2><p id="member-count" class="text-sm text-neutral-500"></p></div>
+  <input id="member-search" type="search" placeholder="Cari nama / NIM…" class="w-full rounded-xl border border-neutral-300 bg-white px-4 py-2.5 text-sm outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-300 dark:border-neutral-700 dark:bg-neutral-950 sm:max-w-xs">
+</div>
+<div id="member-body"></div>
+
+</main>
+<div id="app-footer"></div>
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/core.js"></script>
+<script src="../assets/js/pages.js"></script>
+</body>
+</html>

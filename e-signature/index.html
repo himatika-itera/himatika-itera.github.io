@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pengajuan Tanda Tangan Elektronik · Himatika ITERA</title>
+<meta name="description" content="Pengajuan tanda tangan elektronik Himatika ITERA.">
+<meta name="theme-color" content="#facc15">
+<script>try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark')}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/tailwind.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="bg-stone-50 text-neutral-900 antialiased dark:bg-neutral-950 dark:text-neutral-100" data-root="../" data-page="e-signature" data-protected="true">
+<div id="app-header"></div>
+<main id="main" class="mx-auto max-w-6xl px-4 py-10">
+<header class="mb-8"><h1 class="text-3xl font-extrabold md:text-4xl">Pengajuan Tanda Tangan Elektronik</h1><p class="mt-2 max-w-2xl text-neutral-600 dark:text-neutral-400">Unggah dokumen PDF (maks. 5 MB); berkas disimpan di Google Drive.</p><div class="mt-4 h-1.5 w-20 rounded-full bg-brand-400"></div></header>
+<div class="grid gap-8 lg:grid-cols-5">
+  <form id="esign-form" class="rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm dark:border-neutral-800 dark:bg-neutral-900 space-y-4 lg:col-span-2">
+    <div><label class="mb-1 block text-sm font-semibold">Judul dokumen</label><input name="judul" required maxlength="160" class="w-full rounded-xl border border-neutral-300 bg-white px-4 py-2.5 text-sm outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-300 dark:border-neutral-700 dark:bg-neutral-950"></div>
+    <div><label class="mb-1 block text-sm font-semibold">Penandatangan</label><select name="penandatangan" class="w-full rounded-xl border border-neutral-300 bg-white px-4 py-2.5 text-sm outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-300 dark:border-neutral-700 dark:bg-neutral-950"><option>Ketua Umum Himpunan (Kahim)</option><option>Sekretaris Jenderal (Sekjen)</option><option>Kahim dan Sekjen</option></select></div>
+    <div><label class="mb-1 block text-sm font-semibold">Catatan (opsional)</label><textarea name="catatan" rows="3" maxlength="500" class="w-full rounded-xl border border-neutral-300 bg-white px-4 py-2.5 text-sm outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-300 dark:border-neutral-700 dark:bg-neutral-950"></textarea></div>
+    <div><label class="mb-1 block text-sm font-semibold">Berkas PDF</label><input name="berkas" type="file" accept="application/pdf" required class="w-full rounded-xl border border-neutral-300 bg-white px-4 py-2.5 text-sm outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-300 dark:border-neutral-700 dark:bg-neutral-950 file:mr-3 file:rounded-lg file:border-0 file:bg-brand-400 file:px-3 file:py-1.5 file:font-semibold file:text-neutral-900"></div>
+    <button type="submit" class="w-full rounded-xl bg-brand-400 px-5 py-2.5 text-sm font-bold text-neutral-900 shadow hover:bg-brand-300 disabled:opacity-60">Ajukan Tanda Tangan</button>
+  </form>
+  <div class="lg:col-span-3"><h2 class="mb-3 text-lg font-extrabold">Riwayat pengajuan</h2>
+    <div class="overflow-x-auto rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm dark:border-neutral-800 dark:bg-neutral-900 p-0"><table class="w-full text-left text-sm"><thead class="bg-brand-100 text-xs uppercase text-brand-900 dark:bg-neutral-800 dark:text-brand-300"><tr><th class="px-4 py-3">Dokumen</th><th class="px-4 py-3">Penandatangan</th><th class="px-4 py-3">Status</th><th class="px-4 py-3">Diajukan</th></tr></thead><tbody id="esign-body"></tbody></table></div></div>
+</div>
+
+</main>
+<div id="app-footer"></div>
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/core.js"></script>
+<script src="../assets/js/pages.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kalender Program Kerja · Himatika ITERA</title>
+<meta name="description" content="Kalender program kerja Himatika ITERA.">
+<meta name="theme-color" content="#facc15">
+<script>try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark')}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/tailwind.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="bg-stone-50 text-neutral-900 antialiased dark:bg-neutral-950 dark:text-neutral-100" data-root="../" data-page="calendar" data-protected="true">
+<div id="app-header"></div>
+<main id="main" class="mx-auto max-w-6xl px-4 py-10">
+<header class="mb-8"><h1 class="text-3xl font-extrabold md:text-4xl">Kalender Program Kerja</h1><p class="mt-2 max-w-2xl text-neutral-600 dark:text-neutral-400">Terintegrasi dengan Google Spreadsheets.</p><div class="mt-4 h-1.5 w-20 rounded-full bg-brand-400"></div></header>
+<div class="mb-4 flex flex-wrap items-center gap-2">
+  <button id="cal-prev" class="rounded-lg border border-neutral-300 px-3 py-2 text-sm font-semibold hover:bg-brand-100 dark:border-neutral-700 dark:hover:bg-neutral-800" aria-label="Bulan sebelumnya">←</button>
+  <h2 id="cal-title" class="min-w-[10rem] text-center text-xl font-extrabold capitalize"></h2>
+  <button id="cal-next" class="rounded-lg border border-neutral-300 px-3 py-2 text-sm font-semibold hover:bg-brand-100 dark:border-neutral-700 dark:hover:bg-neutral-800" aria-label="Bulan berikutnya">→</button>
+  <button id="cal-today" class="ml-2 rounded-lg bg-brand-400 px-3 py-2 text-sm font-bold text-neutral-900">Hari ini</button>
+  <a id="cal-open" target="_blank" rel="noopener" class="ml-auto text-sm font-semibold text-brand-700 hover:underline dark:text-brand-400">Buka spreadsheet ↗</a>
+</div>
+<div id="cal-grid" class="grid grid-cols-7 gap-1.5"></div>
+<h3 class="mb-3 mt-10 text-lg font-extrabold">Kegiatan bulan ini</h3>
+<ul id="cal-list" class="space-y-3"></ul>
+
+</main>
+<div id="app-footer"></div>
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/core.js"></script>
+<script src="../assets/js/pages.js"></script>
+</body>
+</html>
