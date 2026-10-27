@@ -95,7 +95,7 @@ window.HIMATIKA_DATA = {
       { nama: "Dwi Rianti", nim: "16117034", status: "Anggota Luar Biasa" },
       { nama: "Haniah", nim: "16117035", status: "Anggota Luar Biasa" },
       { nama: "Dion Triwijaya", nim: "16117036", status: "Anggota Luar Biasa" },
-      { nama: "Aziza Indah Putri", nim: "16117037", status: "Anggota Luar Biasa" },
+      { nama: "Aziza Putri", nim: "16117037", status: "Anggota Luar Biasa" },
       { nama: "Anggrenita Yohana Br Silaen", nim: "16117038", status: "Anggota Luar Biasa" },
       { nama: "Hadi Mulyono", nim: "16117039", status: "Anggota Luar Biasa" },
       { nama: "Iffa Rahma Larasati", nim: "16117040", status: "Anggota Luar Biasa" },

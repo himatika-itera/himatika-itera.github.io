@@ -23,7 +23,7 @@ window.HIMATIKA_CONFIG = {
   calendarSheetName: "Kalender",
 
   // Akun demo (hanya dipakai saat Firebase belum diisi)
-  demoAccount: { email: "demo@himatika.local", password: "himatika123", name: "Anggota Demo" },
+  demoAccount: { },
 
   // Kontak footer (GANTI dengan data resmi)
   contact: {
