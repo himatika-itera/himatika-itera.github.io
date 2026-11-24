@@ -1,0 +1,60 @@
+/* theme.css — nilai tema (CSS Variables) + varian berdasarkan atribut data-* di <html>.
+   theme.js menimpa variabel ini dari konfigurasi Dashboard; nilai di sini hanyalah default
+   agar halaman tidak "kedip" sebelum konfigurasi termuat. */
+:root {
+  --primary-color: #F4C542; --primary-dark: #c79e35; --primary-soft: #fdf3d9; --primary-contrast: #111111;
+  --secondary-color: #FFFFFF; --accent-color: #1F3A5F; --accent-contrast: #FFFFFF;
+  --background-color: #F8F9FA; --text-color: #222222; --muted-color: #6b6e72; --border-color: #e2e3e4; --surface-color: #FFFFFF;
+  --border-radius: 12px; --base-font-size: 16px; --max-width: 1200px;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-heading: "Poppins", "Inter", system-ui, sans-serif;
+  --shadow: 0 2px 12px rgba(16, 24, 40, .08); --section-pad: 5rem;
+  --radius-btn: var(--border-radius);
+}
+
+/* tombol */
+[data-button="rounded"] { --radius-btn: var(--border-radius); }
+[data-button="square"] { --radius-btn: 2px; }
+[data-button="pill"] { --radius-btn: 999px; }
+
+/* kartu */
+[data-card="flat"] .card, [data-card="flat"] .card--pad { box-shadow: none; border-color: transparent; background: var(--primary-soft); }
+[data-card="elevated"] .card, [data-card="elevated"] .card--pad { box-shadow: var(--shadow); border-color: transparent; }
+[data-card="outlined"] .card, [data-card="outlined"] .card--pad { box-shadow: none; border-color: var(--border-color); }
+
+/* tata letak */
+[data-layout="boxed"] body { background: color-mix(in srgb, var(--background-color) 88%, var(--text-color)); }
+[data-layout="boxed"] .page { max-width: calc(var(--max-width) + 2rem); margin: 0 auto; background: var(--background-color); box-shadow: 0 0 0 1px var(--border-color); }
+
+/* navbar */
+[data-navbar="solid"] .site-header { background: var(--surface-color); border-bottom: 1px solid var(--border-color); }
+[data-navbar="transparent"] .site-header { background: color-mix(in srgb, var(--background-color) 78%, transparent); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border-bottom: 1px solid transparent; }
+[data-navbar="floating"] .site-header { background: transparent; padding: .6rem 1rem 0; }
+[data-navbar="floating"] .site-header .nav { background: var(--surface-color); border-radius: calc(var(--border-radius) + 6px); box-shadow: var(--shadow); padding-inline: 1.1rem; max-width: var(--max-width); }
+
+/* hero */
+[data-hero="centered"] .hero__inner { grid-template-columns: 1fr; text-align: center; justify-items: center; }
+[data-hero="centered"] .hero__cta { justify-content: center; }
+[data-hero="centered"] .hero__media { max-width: 760px; }
+[data-hero="split"] .hero__inner { grid-template-columns: 1.1fr .9fr; text-align: left; }
+[data-hero="fullscreen"] .hero { min-height: min(88vh, 760px); display: grid; align-items: center; color: #fff; background: var(--accent-color); }
+[data-hero="fullscreen"] .hero__media { position: absolute; inset: 0; margin: 0; max-width: none; }
+[data-hero="fullscreen"] .hero__media img { width: 100%; height: 100%; object-fit: cover; border-radius: 0; box-shadow: none; }
+[data-hero="fullscreen"] .hero__media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.6)); }
+[data-hero="fullscreen"] .hero__inner { position: static; grid-template-columns: 1fr; text-align: center; justify-items: center; }
+[data-hero="fullscreen"] .hero__text { position: relative; z-index: 2; }
+[data-hero="fullscreen"] .hero__media { z-index: 0; }
+[data-hero="fullscreen"] .hero::before { display: none; }
+[data-hero="fullscreen"] .hero__sub { margin-inline: auto; }
+[data-hero="fullscreen"] .hero__cta { justify-content: center; }
+[data-hero="fullscreen"] .hero__sub, [data-hero="fullscreen"] .eyebrow { color: rgba(255,255,255,.9); }
+
+/* footer */
+[data-footer="simple"] .footer__inner { grid-template-columns: 1fr; text-align: center; justify-items: center; }
+[data-footer="simple"] .footer__list { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; justify-content: center; }
+[data-footer="columns"] .footer__inner { grid-template-columns: 2fr 1fr 1fr; }
+[data-footer="columns"] .footer__copy { grid-column: 1 / -1; }
+
+/* jarak antar-bagian */
+[data-spacing="compact"] .section { --section-pad: 3rem; }
+[data-spacing="relaxed"] .section { --section-pad: 7rem; }

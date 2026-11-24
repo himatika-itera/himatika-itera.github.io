@@ -1,0 +1,23 @@
+/* responsive.css — mobile-first: gaya dasar sudah untuk layar kecil; berkas ini mengatur menu & tata letak. */
+@media (max-width: 860px) {
+  .nav__toggle { display: block; }
+  .nav__wrap { position: absolute; left: 0; right: 0; top: 100%; }
+  .nav__list { display: none; flex-direction: column; align-items: stretch; gap: 0; background: var(--surface-color); border-bottom: 1px solid var(--border-color); box-shadow: var(--shadow); padding: .5rem 1rem 1rem; max-height: calc(100vh - 4.5rem); overflow-y: auto; }
+  .nav__list.is-open { display: flex; }
+  .nav__link { padding: .8rem .75rem; }
+  .nav__sub { position: static; display: block; border: 0; box-shadow: none; padding: 0 0 0 1rem; background: transparent; }
+  [data-navbar="floating"] .site-header .nav { border-radius: var(--border-radius); }
+  [data-hero="split"] .hero__inner { grid-template-columns: 1fr; text-align: center; justify-items: center; }
+  [data-hero="split"] .hero__cta { justify-content: center; }
+  [data-hero="split"] .hero__sub { margin-inline: auto; }
+  [data-footer="columns"] .footer__inner { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .container { padding-inline: 1rem; }
+  .brand__name { font-size: .95rem; }
+  .hero__cta .btn { flex: 1 1 100%; }
+  .section__head { margin-bottom: 1.6rem; }
+}
+@media (min-width: 861px) {
+  .nav__wrap { display: block; }
+}
